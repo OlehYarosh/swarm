@@ -1,0 +1,69 @@
+#map-container {
+    position: relative;
+    margin: auto;
+}
+
+#map {
+    width: 500px; 
+    height: 500px;
+    border: 2px solid black;
+    background-color: #fff;
+}
+
+#coordinate-system {
+    position: absolute;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.axis-x {
+    display: flex;
+    position: relative;
+    left: 0;
+    width: 480px;
+    top: 10px;
+}
+
+.axis-x::after {
+    content: "X";
+    position: absolute;
+    top: 30px;
+    left: calc((500px / 2) - 10px);
+}
+
+.axis-label-x {
+    font-size: 14px;
+    margin: 0 37.7px;
+}
+
+.axis-label-x:first-child {
+    margin-left: 0;
+}
+
+.axis-y {
+    position: absolute;
+    top: -500px;
+    left: -25px;
+    bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.axis-y::after {
+    content: "Y";
+    position: absolute;
+    right: 30px;
+}
+
+.axis-label-y {
+    font-size: 14px;
+    margin: 40px 0;
+}
+
+.axis-label-y:first-child {
+    margin-top: 30px;
+}
